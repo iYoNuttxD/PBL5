@@ -1,4 +1,6 @@
-public class CPU{
+package PBL5;
+
+public class CPU extends Produto{
     private String tipo;
     private int velocidade;
     private int threads;
@@ -23,7 +25,71 @@ public class CPU{
         this.frequencia = frequencia;
         this.soquete = soquete;
 
-        super(String descricao, float preco, String marca, String modelo)
+        super(String descricao, float preco, String marca, String modelo);
+    }
+
+    public String getTipo(){
+        return tipo;
+    }
+
+    public void setTipo(String tipo){
+        this.tipo = tipo;
+    }
+
+    public int getVelocidade(){
+        return velocidade;
+    }
+
+    public void setVelocidade(){
+        this.velocidade = velocidade;
+    }
+
+    public int getThreads(){
+        return threads;
+    }
+
+    public void setThreads(){
+        this.threads = threads;
+    }
+
+    private int getTdp(){
+        return tdp;
+    }
+
+    public void setTdp(){
+        this.tdp = tdp;
+    }
+
+    private int getCodCpu(){
+        return codCpu;
+    }
+
+    public void setCodCpu(){
+        this.codCpu = codCpu;
+    }
+
+    public int getNucleos(){
+        return nucleos;
+    }
+
+    public void setNucleos(){
+        this.nucleos = nucleos;
+    }
+
+    public String getGpus(){
+        return gpus;
+    }
+
+    public void setGpus(){
+        this.gpus = gpus;
+    }
+
+    public String getSoquete(){
+        return soquete;
+    }
+
+    public void setSoquete(){
+        this.soquete = soquete;
     }
 };
 
