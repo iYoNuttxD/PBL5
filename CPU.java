@@ -14,7 +14,7 @@ public class CPU extends Produto{
 
 
     public CPU(String tipo, int velocidade, int threads, int tdp, int codCpu,
-               String gpus, int nucleos, float frequencia,String soquete) {
+               String gpus, int nucleos, float frequencia,String soquete, String descricao, float preco, String marca, String modelo) {
         this.tipo = tipo;
         this.velocidade = velocidade;
         this.threads = threads;
