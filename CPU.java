@@ -1,6 +1,6 @@
 package PBL5;
 
-public class CPU extends Produto{
+public class CPU extends Produto {
     private String tipo;
     private int velocidade;
     private int threads;
@@ -10,8 +10,6 @@ public class CPU extends Produto{
     private int nucleos;
     private float frequencia;
     private String soquete;
-
-
 
     public CPU(String tipo, int velocidade, int threads, int tdp, int codCpu, String gpus, int nucleos,
                float frequencia,String soquete, String descricao, float preco, String marca, String modelo){
@@ -39,7 +37,7 @@ public class CPU extends Produto{
         return velocidade;
     }
 
-    public void setVelocidade(){
+    public void setVelocidade(int velocidade){
         this.velocidade = velocidade;
     }
 
@@ -47,7 +45,7 @@ public class CPU extends Produto{
         return threads;
     }
 
-    public void setThreads(){
+    public void setThreads(int threads){
         this.threads = threads;
     }
 
@@ -55,7 +53,7 @@ public class CPU extends Produto{
         return tdp;
     }
 
-    public void setTdp(){
+    public void setTdp(int tdp){
         this.tdp = tdp;
     }
 
@@ -63,7 +61,7 @@ public class CPU extends Produto{
         return codCpu;
     }
 
-    public void setCodCpu(){
+    public void setCodCpu(int codCpu){
         this.codCpu = codCpu;
     }
 
@@ -71,7 +69,7 @@ public class CPU extends Produto{
         return nucleos;
     }
 
-    public void setNucleos(){
+    public void setNucleos(int nucleos){
         this.nucleos = nucleos;
     }
 
@@ -79,7 +77,7 @@ public class CPU extends Produto{
         return gpus;
     }
 
-    public void setGpus(){
+    public void setGpus(String gpus){
         this.gpus = gpus;
     }
 
@@ -87,8 +85,15 @@ public class CPU extends Produto{
         return soquete;
     }
 
-    public void setSoquete(){
+    public void setSoquete(String soquete){
         this.soquete = soquete;
     }
-};
-
+    
+    public float getFrequencia(){
+        return frequencia;
+    }
+    
+    public void setFrequencia(float frequencia){
+        this.frequencia = frequencia;
+    }
+}
