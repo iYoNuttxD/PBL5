@@ -13,8 +13,9 @@ public class CPU extends Produto{
 
 
 
-    public CPU(String tipo, int velocidade, int threads, int tdp, int codCpu,
-               String gpus, int nucleos, float frequencia,String soquete, String descricao, float preco, String marca, String modelo) {
+    public CPU(String tipo, int velocidade, int threads, int tdp, int codCpu, String gpus, int nucleos,
+               float frequencia,String soquete, String descricao, float preco, String marca, String modelo){
+        super(descricao, marca, modelo, preco);
         this.tipo = tipo;
         this.velocidade = velocidade;
         this.threads = threads;
@@ -24,8 +25,6 @@ public class CPU extends Produto{
         this.nucleos = nucleos;
         this.frequencia = frequencia;
         this.soquete = soquete;
-
-        super(String descricao, float preco, String marca, String modelo);
     }
 
     public String getTipo(){
