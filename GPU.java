@@ -6,14 +6,14 @@ public class GPU extends Produto {
     private int nucleos;
     private int tam_Mem;
     private int vel_Mem;
-    private int tipo_Mem;
+    private String tipo_Mem;
     private int tdp;
     private int slot;
     private int tamanho;
     private String conector;
 
     public GPU(String marca, String modelo, String descricao, float preco, int cod_Gpu, String pcie, int nucleos,
-               int tam_Mem, int vel_Mem, int tipo_Mem, int tdp, int slot, int tamanho, String conector){
+               int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector){
         super(marca, modelo, descricao, preco);
         this.cod_Gpu = cod_Gpu;
         this.pcie = pcie;
@@ -28,4 +28,82 @@ public class GPU extends Produto {
 
     }
 
+    public int getCod_Gpu(){
+        return cod_Gpu;
+    }
+
+    public String getPcie(){
+        return pcie;
+    }
+    public int getNucleos(){
+        return nucleos;
+    }
+
+    public int getTam_Mem(){
+        return tam_Mem;
+    }
+
+    public int getVel_Mem(){
+        return  vel_Mem;
+    }
+
+    public String getTipo_Mem(){
+        return tipo_Mem;
+    }
+
+    public int getTdp(){
+        return tdp;
+    }
+
+    public int getSlot() {
+        return slot;
+    }
+
+    public int getTamanho() {
+        return tamanho;
+    }
+
+    public String getConector(){
+        return conector;
+    }
+
+    public void setCod_Gpu(int cod_Gpu){
+        this.cod_Gpu = cod_Gpu;
+    }
+
+    public void setPcie(String pcie){
+        this.pcie = pcie;
+    }
+
+    public void setNucleos(int nucleos){
+        this.nucleos = nucleos;
+    }
+
+    public void setTam_Mem(int tam_Mem){
+        this.tam_Mem= tam_Mem;
+    }
+
+    public void setVel_Mem(int vel_Mem){
+        this.vel_Mem = vel_Mem;
+    }
+
+    public void setTipo_Mem(String tipo_Mem){
+        this.tipo_Mem = tipo_Mem;
+    }
+
+    public void setTdp(int tdp){
+        this.tdp = tdp;
+    }
+
+    public void setSlot(int slot){
+        this.slot = slot;
+    }
+
+    public void setTamanho(int tamanho){
+        this.tamanho = tamanho;
+    }
+
+    public void setConector(String conector){
+        this.conector = conector;
+    }
 }
