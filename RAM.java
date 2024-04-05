@@ -3,8 +3,9 @@ public class RAM extends Produto {
     private String tipo;
     private int velocidade;
 
-    public RAM(float preco, int capacidade, String tipo, String marca, String modelo, String descricao, int velocidade) {
-        super(marca, modelo, descricao, preco);
+    public RAM(float preco, int capacidade, String tipo, String marca, String modelo, String descricao, int velocidade,
+               int cod_Produto) {
+        super(marca, modelo, descricao, preco, cod_Produto);
         this.velocidade = velocidade;
         this.capacidade = capacidade;
         this.tipo = tipo;
