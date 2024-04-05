@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Placa_Mae extends Produto{
     private String tipo;
     private int velocidade;
@@ -7,6 +9,7 @@ public class Placa_Mae extends Produto{
     private String tamanho;
     private String soquete;
     private String chipSet;
+    private ArrayList<Placa_Mae> placaMaes = new ArrayList<Placa_Mae>();
 
 
 
