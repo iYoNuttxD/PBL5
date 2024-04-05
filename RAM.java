@@ -1,9 +1,12 @@
 public class RAM extends Produto {
     private int capacidade;
     private String tipo;
+    private int velocidade;
 
-    public RAM(String nome, double preco, int capacidade, String tipo) {
-        super(nome, preco, marca);
+    public RAM(float preco, int capacidade, String tipo,
+               String marca, String modelo, String descricao, int velocidade) {
+        super(marca, modelo, descricao, preco);
+        this.velocidade = velocidade;
         this.capacidade = capacidade;
         this.tipo = tipo;
     }
@@ -16,14 +19,20 @@ public class RAM extends Produto {
         return tipo;
     }
 
-    @Override
-    public String toString() {
-        return "RAM{" +
-                "capacidade=" + capacidade +
-                ", tipo='" + tipo + '\'' +
-                ", nome='" + nome + '\'' +
-                ", preco=" + preco +
-                '}';
+    public int getVelocidade() {
+        return velocidade;
+    }
+
+    public void setCapacidade(int capacidade) {
+        this.capacidade = capacidade;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
     }
 
 }
