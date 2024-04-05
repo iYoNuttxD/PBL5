@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class GPU extends Produto {
     private String pcie;
     private int nucleos;
@@ -8,6 +10,7 @@ public class GPU extends Produto {
     private int slot;
     private int tamanho;
     private String conector;
+    private ArrayList<GPU> gpus = new ArrayList<GPU>();
 
     public GPU(String marca, String modelo, String descricao, float preco, String pcie, int nucleos,
                int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector,
