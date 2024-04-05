@@ -1,7 +1,6 @@
 package PBL5;
 
 public class GPU extends Produto {
-    private int cod_Gpu;
     private String pcie;
     private int nucleos;
     private int tam_Mem;
@@ -12,10 +11,9 @@ public class GPU extends Produto {
     private int tamanho;
     private String conector;
 
-    public GPU(String marca, String modelo, String descricao, float preco, int cod_Gpu, String pcie, int nucleos,
+    public GPU(String marca, String modelo, String descricao, float preco, String pcie, int nucleos,
                int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector){
         super(marca, modelo, descricao, preco);
-        this.cod_Gpu = cod_Gpu;
         this.pcie = pcie;
         this.nucleos = nucleos;
         this.tam_Mem = tam_Mem;
@@ -26,10 +24,6 @@ public class GPU extends Produto {
         this.tamanho = tamanho;
         this.conector = conector;
 
-    }
-
-    public int getCod_Gpu(){
-        return cod_Gpu;
     }
 
     public String getPcie(){
@@ -65,10 +59,6 @@ public class GPU extends Produto {
 
     public String getConector(){
         return conector;
-    }
-
-    public void setCod_Gpu(int cod_Gpu){
-        this.cod_Gpu = cod_Gpu;
     }
 
     public void setPcie(String pcie){
