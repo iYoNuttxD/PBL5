@@ -46,7 +46,7 @@ public class CPU extends Produto {
         this.threads = threads;
     }
 
-    private int getTdp(){
+    public int getTdp(){
         return tdp;
     }
 
