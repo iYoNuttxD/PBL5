@@ -1,5 +1,3 @@
-package PBL5;
-
 public class Main {
     public static void main(String [] args){
         System.out.println("Equipe: Daniel Ganz Musse, João Vitor de Souza Hernandes, " +
