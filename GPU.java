@@ -10,8 +10,9 @@ public class GPU extends Produto {
     private String conector;
 
     public GPU(String marca, String modelo, String descricao, float preco, String pcie, int nucleos,
-               int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector){
-        super(marca, modelo, descricao, preco);
+               int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector,
+               int cod_Produto){
+        super(marca, modelo, descricao, preco, cod_Produto);
         this.pcie = pcie;
         this.nucleos = nucleos;
         this.tam_Mem = tam_Mem;
