@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CPU extends Produto {
     private String tipo;
     private int velocidade;
@@ -7,6 +9,7 @@ public class CPU extends Produto {
     private int nucleos;
     private float frequencia;
     private String soquete;
+    private ArrayList<CPU> cpus = new ArrayList<CPU>();
 
     public CPU(String tipo, int velocidade, int threads, int tdp, String gpus, int nucleos,
                float frequencia,String soquete, String descricao, float preco, String marca, String modelo,
