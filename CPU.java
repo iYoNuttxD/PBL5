@@ -3,20 +3,19 @@ public class CPU extends Produto {
     private int velocidade;
     private int threads;
     private int tdp;
-    private int codCpu;
     private String gpus;
     private int nucleos;
     private float frequencia;
     private String soquete;
 
-    public CPU(String tipo, int velocidade, int threads, int tdp, int codCpu, String gpus, int nucleos,
-               float frequencia,String soquete, String descricao, float preco, String marca, String modelo){
-        super(descricao, marca, modelo, preco);
+    public CPU(String tipo, int velocidade, int threads, int tdp, String gpus, int nucleos,
+               float frequencia,String soquete, String descricao, float preco, String marca, String modelo,
+               int cod_Produto){
+        super(descricao, marca, modelo, preco, cod_Produto);
         this.tipo = tipo;
         this.velocidade = velocidade;
         this.threads = threads;
         this.tdp = tdp;
-        this.codCpu = codCpu;
         this.gpus = gpus;
         this.nucleos = nucleos;
         this.frequencia = frequencia;
@@ -55,14 +54,6 @@ public class CPU extends Produto {
         this.tdp = tdp;
     }
 
-    private int getCodCpu(){
-        return codCpu;
-    }
-
-    public void setCodCpu(int codCpu){
-        this.codCpu = codCpu;
-    }
-
     public int getNucleos(){
         return nucleos;
     }
@@ -86,11 +77,11 @@ public class CPU extends Produto {
     public void setSoquete(String soquete){
         this.soquete = soquete;
     }
-    
+
     public float getFrequencia(){
         return frequencia;
     }
-    
+
     public void setFrequencia(float frequencia){
         this.frequencia = frequencia;
     }
