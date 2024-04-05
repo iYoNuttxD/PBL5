@@ -1,5 +1,3 @@
-package PBL5;
-
 public class Produto {
     protected int cod_Produto;
     protected String marca;
