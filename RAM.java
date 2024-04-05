@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 public class RAM extends Produto {
     private int capacidade;
     private String tipo;
     private int velocidade;
+    private ArrayList<RAM> rams = new ArrayList<RAM>();
 
     public RAM(float preco, int capacidade, String tipo, String marca, String modelo, String descricao, int velocidade,
                int cod_Produto) {
