@@ -8,11 +8,13 @@ public class Placa_Mae extends Produto{
     private int sata;
     private String tamanho;
     private String soquete;
+    private int codPlacaM;
+    private String chipSet;
 
 
 
     public Placa_Mae(String tipo, int velocidade, String pcie, int m2, int sata,
-                     String tamanho, String soquete, String descricao, float preco, String marca, String modelo) {
+                     String tamanho, String soquete, int codPlacaM, String chipSet, String descricao, float preco, String marca, String modelo) {
         super(descricao, marca, modelo, preco);
         this.tipo = tipo;
         this.velocidade = velocidade;
@@ -21,7 +23,8 @@ public class Placa_Mae extends Produto{
         this.sata = sata;
         this.tamanho = tamanho;
         this.soquete = soquete;
-
+        this.codPlacaM = codPlacaM;
+        this.chipSet = chipSet;
 
     }
 
@@ -79,5 +82,21 @@ public class Placa_Mae extends Produto{
 
     public void setSoquete(){
         this.soquete = soquete;
+    }
+
+    public String getChipSet(){
+        return chipSet;
+    }
+
+    public void setChipSet(){
+        this.chipSet = chipSet;
+    }
+
+    public int getCodPlacaM(){
+        return codPlacaM;
+    }
+
+    public void setCodPlacaM(){
+        this.codPlacaM = codPlacaM;
     }
 };
