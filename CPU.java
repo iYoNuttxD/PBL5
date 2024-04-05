@@ -1,3 +1,4 @@
+package PBL5;
 public class CPU extends Produto {
     private String tipo;
     private int velocidade;
@@ -11,7 +12,7 @@ public class CPU extends Produto {
     public CPU(String tipo, int velocidade, int threads, int tdp, String gpus, int nucleos,
                float frequencia,String soquete, String descricao, float preco, String marca, String modelo,
                int cod_Produto){
-        super(descricao, marca, modelo, preco, cod_Produto);
+        super(marca, modelo, descricao, preco, cod_Produto);
         this.tipo = tipo;
         this.velocidade = velocidade;
         this.threads = threads;
