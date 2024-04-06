@@ -28,6 +28,28 @@ public class GPU extends Produto {
 
     }
 
+    public void visualizarEstoqueGPU(GPU gpu) {
+        int i = 1;
+        for (GPU gpuItem : gpus) {
+            System.out.println(i + "// " +  gpuItem);
+            i++;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Núcleos: " + nucleos +
+                ", Tamanho da Memória: " + tam_Mem +
+                ", Velocidade da Memória: " + vel_Mem +
+                ", Tipo de Memória: " + tipo_Mem +
+                ", TDP: " + tdp +
+                ", Conector: " + conector +
+                ", PCIe: " + pcie +
+                ", Slot: " + slot +
+                ", Tamanho: " + tamanho;
+    }
+
     public String getPcie(){
         return pcie;
     }
