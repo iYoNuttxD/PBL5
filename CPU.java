@@ -1,3 +1,5 @@
+package PBL5;
+
 import java.util.ArrayList;
 
 public class CPU extends Produto {
@@ -24,6 +26,28 @@ public class CPU extends Produto {
         this.frequencia = frequencia;
         this.soquete = soquete;
     }
+
+    public void visualizarEstoqueCPU(CPU cpu) {
+        int i = 1;
+        for (CPU cpuItem : cpus) {
+            System.out.println(i + "// " +  cpuItem);
+            i++;
+        }
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() +
+                ", Núcleos: " + nucleos +
+                ", Threads: " + threads +
+                ", Frequência: " + frequencia +
+                ", Soquete: " + soquete +
+                ", TDP: " + tdp +
+                ", Gráficos Integrados: " + gpus +
+                ", Velocidade da Memória compatível: " + velocidade +
+                ", Tipo de Memória compatível: " + tipo;
+    }
+
 
     public String getTipo(){
         return tipo;
