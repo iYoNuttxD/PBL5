@@ -9,7 +9,7 @@ public class Placa_Mae extends Produto{
     private String tamanho;
     private String soquete;
     private String chipSet;
-    private ArrayList<Placa_Mae> placaMaes = new ArrayList<Placa_Mae>();
+    private static ArrayList<Placa_Mae> placaMaes = new ArrayList<Placa_Mae>();
 
 
 
@@ -26,6 +26,26 @@ public class Placa_Mae extends Produto{
         this.soquete = soquete;
         this.chipSet = chipSet;
 
+    }
+
+    public static void visualizarEstoquePlacaMae() {
+        int i = 1;
+        for (Placa_Mae pmItem : placaMaes) {
+            System.out.println(i + "// " +  pmItem);
+            i++;
+        }
+    }
+
+    public String toString(){
+        return super.toString() +
+                ", Soquete: " + soquete +
+                ", Chipset: " + chipSet +
+                ", PCie: " + pcie +
+                ", Quantidade de M2: " + m2 +
+                ", Quantidade de SATA: " + sata +
+                ", Velocidade da Memória compatível: " + velocidade +
+                ", Tipo de Memória compatível: " + tipo +
+                ", Tamanho: " + tamanho;
     }
 
     public String getTipo(){
