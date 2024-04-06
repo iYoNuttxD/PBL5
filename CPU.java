@@ -1,5 +1,3 @@
-package PBL5;
-
 import java.util.ArrayList;
 
 public class CPU extends Produto {
@@ -11,7 +9,7 @@ public class CPU extends Produto {
     private int nucleos;
     private float frequencia;
     private String soquete;
-    private ArrayList<CPU> cpus = new ArrayList<CPU>();
+    private static ArrayList<CPU> cpus = new ArrayList<CPU>();
 
     public CPU(String tipo, int velocidade, int threads, int tdp, String gpus, int nucleos,
                float frequencia,String soquete, String descricao, float preco, String marca, String modelo,
@@ -27,7 +25,7 @@ public class CPU extends Produto {
         this.soquete = soquete;
     }
 
-    public void visualizarEstoqueCPU(CPU cpu) {
+    public static void visualizarEstoqueCPU() {
         int i = 1;
         for (CPU cpuItem : cpus) {
             System.out.println(i + "// " +  cpuItem);
