@@ -10,7 +10,7 @@ public class GPU extends Produto {
     private int slot;
     private int tamanho;
     private String conector;
-    private ArrayList<GPU> gpus = new ArrayList<GPU>();
+    private static ArrayList<GPU> gpus = new ArrayList<GPU>();
 
     public GPU(String marca, String modelo, String descricao, float preco, String pcie, int nucleos,
                int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector,
@@ -27,8 +27,8 @@ public class GPU extends Produto {
         this.conector = conector;
 
     }
-
-    public void visualizarEstoqueGPU(GPU gpu) {
+    
+    public static void visualizarEstoqueGPU() {
         int i = 1;
         for (GPU gpuItem : gpus) {
             System.out.println(i + "// " +  gpuItem);
