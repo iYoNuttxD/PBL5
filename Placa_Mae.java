@@ -35,7 +35,8 @@ public class Placa_Mae extends Produto{
             i++;
         }
     }
-
+    
+    @Override
     public String toString(){
         return super.toString() +
                 ", Soquete: " + soquete +
