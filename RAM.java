@@ -4,7 +4,7 @@ public class RAM extends Produto {
     private int capacidade;
     private String tipo;
     private int velocidade;
-    private ArrayList<RAM> rams = new ArrayList<RAM>();
+    private static ArrayList<RAM> rams = new ArrayList<RAM>();
 
     public RAM(float preco, int capacidade, String tipo, String marca, String modelo, String descricao, int velocidade,
                int cod_Produto) {
@@ -13,6 +13,23 @@ public class RAM extends Produto {
         this.capacidade = capacidade;
         this.tipo = tipo;
     }
+
+    public static void visualizarEstoqueRAM() {
+        int i = 1;
+        for (RAM ramItem : rams) {
+            System.out.println(i + "// " +  ramItem);
+            i++;
+        }
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString() +
+                ", Velocidade da Memória: " + velocidade +
+                ", Tipo de Memória: " + tipo +
+                ", Capacidade da Memória: " + capacidade;
+    }
+
 
     public int getCapacidade() {
         return capacidade;
