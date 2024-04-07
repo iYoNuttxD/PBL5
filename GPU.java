@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class GPU extends Produto {
     private String pcie;
     private int nucleos;
@@ -10,7 +8,6 @@ public class GPU extends Produto {
     private int slot;
     private int tamanho;
     private String conector;
-    private static ArrayList<GPU> gpus = new ArrayList<GPU>();
 
     public GPU(String marca, String modelo, String descricao, float preco, String pcie, int nucleos,
                int tam_Mem, int vel_Mem, String tipo_Mem, int tdp, int slot, int tamanho, String conector,
@@ -25,30 +22,26 @@ public class GPU extends Produto {
         this.slot = slot;
         this.tamanho = tamanho;
         this.conector = conector;
-
-    }
-    
-    public static void visualizarEstoqueGPU() {
-        int i = 1;
-        for (GPU gpuItem : gpus) {
-            System.out.println(i + "// " +  gpuItem);
-            i++;
-        }
     }
 
-    @Override
-    public String toString() {
-        return super.toString() +
-                ", Núcleos: " + nucleos +
-                ", Tamanho da Memória: " + tam_Mem +
-                ", Velocidade da Memória: " + vel_Mem +
-                ", Tipo de Memória: " + tipo_Mem +
-                ", TDP: " + tdp +
-                ", Conector: " + conector +
-                ", PCIe: " + pcie +
-                ", Slot: " + slot +
-                ", Tamanho: " + tamanho;
-    }
+
+@Override
+public String toString() {
+    return getCod_Produto() + " - " + getDescricao() + " (" +
+            "Modelo = '" + getModelo() + '\'' +
+            ", Marca = '" + getMarca() + '\'' +
+            ", Preço = " + getPreco() +
+            ", PCIe = '" + pcie + '\'' +
+            ", Núcleos = " + nucleos +
+            ", Tamanho da Memória = " + tam_Mem + "GB" +
+            ", Velocidade da Memória = " + vel_Mem + "MHz" +
+            ", Tipo de Memória = '" + tipo_Mem + '\'' +
+            ", TDP = " + tdp + "W" +
+            ", Slot = " + slot +
+            ", Tamanho = " + tamanho + "mm" +
+            ", Conector = '" + conector + '\'' +
+            ')';
+}
 
     public String getPcie(){
         return pcie;

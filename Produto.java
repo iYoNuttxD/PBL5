@@ -13,14 +13,6 @@ public class Produto {
         this.cod_Produto = cod_Produto;
     }
 
-    @Override
-    public String toString() {
-        return "Marca: " + marca +
-                ", Modelo: " + modelo +
-                ", Descrição: " + descricao +
-                ", Preço: " + preco +
-                ", Código do Produto: " + cod_Produto;
-    }
 
     public int getCod_Produto(){
         return cod_Produto;

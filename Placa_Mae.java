@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-
-public class Placa_Mae extends Produto{
+public class Placa_Mae extends Produto {
     private String tipo;
     private int velocidade;
     private String pcie;
@@ -9,13 +7,11 @@ public class Placa_Mae extends Produto{
     private String tamanho;
     private String soquete;
     private String chipSet;
-    private static ArrayList<Placa_Mae> placaMaes = new ArrayList<Placa_Mae>();
-
 
 
     public Placa_Mae(String tipo, int velocidade, String pcie, int m2, int sata,
-                     String tamanho, String soquete, String chipSet, String descricao, float preco, String marca,
-                     String modelo, int cod_Produto) {
+                     String tamanho, String soquete, String chipSet, String descricao,
+                     float preco, String marca, String modelo, int cod_Produto) {
         super(marca, modelo, descricao, preco, cod_Produto);
         this.tipo = tipo;
         this.velocidade = velocidade;
@@ -28,88 +24,84 @@ public class Placa_Mae extends Produto{
 
     }
 
-    public static void visualizarEstoquePlacaMae() {
-        int i = 1;
-        for (Placa_Mae pmItem : placaMaes) {
-            System.out.println(i + "// " +  pmItem);
-            i++;
-        }
-    }
-    
     @Override
-    public String toString(){
-        return super.toString() +
-                ", Soquete: " + soquete +
-                ", Chipset: " + chipSet +
-                ", PCie: " + pcie +
-                ", Quantidade de M2: " + m2 +
-                ", Quantidade de SATA: " + sata +
-                ", Velocidade da Memória compatível: " + velocidade +
-                ", Tipo de Memória compatível: " + tipo +
-                ", Tamanho: " + tamanho;
+    public String toString() {
+        return getCod_Produto() + " - " + getDescricao() + " (" +
+                "Modelo = '" + getModelo() + '\'' +
+                ", Marca = '" + getMarca() + '\'' +
+                ", Preço = " + getPreco() +
+                ", Tipo = '" + tipo + '\'' +
+                ", Velocidade = " + velocidade + "MHz" +
+                ", PCIe = '" + pcie + '\'' +
+                ", M.2 Slots = " + m2 +
+                ", SATA = " + sata +
+                ", Tamanho = '" + tamanho + '\'' +
+                ", Soquete = '" + soquete + '\'' +
+                ", ChipSet = '" + chipSet + '\'' +
+                ')';
     }
 
-    public String getTipo(){
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo){
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    public int getVelocidade(){
+    public int getVelocidade() {
         return velocidade;
     }
 
-    public void setVelocidade(){
+    public void setVelocidade() {
         this.velocidade = velocidade;
     }
 
-    public int getM2(){
+    public int getM2() {
         return m2;
     }
 
-    public void setM2(){
+    public void setM2() {
         this.m2 = m2;
     }
 
-    public int getSata(){
+    public int getSata() {
         return sata;
     }
 
-    public void setSata(){
+    public void setSata() {
         this.sata = sata;
     }
 
-    public String getPcie(){
+    public String getPcie() {
         return pcie;
     }
 
-    public void setPcie(){
+    public void setPcie() {
         this.pcie = pcie;
     }
 
-    public String getTamanho(){
+    public String getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(){
+    public void setTamanho() {
         this.tamanho = tamanho;
     }
 
-    public String getSoquete(){
+    public String getSoquete() {
         return soquete;
     }
 
-    public void setSoquete(){
+    public void setSoquete() {
         this.soquete = soquete;
     }
 
-    public String getChipSet(){
+    public String getChipSet() {
         return chipSet;
     }
 
-    public void setChipSet(){
+    public void setChipSet() {
         this.chipSet = chipSet;
     }
 };
